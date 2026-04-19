@@ -37,17 +37,7 @@ and integrated into a web interface using HTML, CSS, and JavaScript.
 
 ## Architecture / Workflow
 
-```mermaid
-flowchart LR
-    A[C Source Code] --> B[Emscripten]
-    B --> C[WebAssembly (.wasm)]
-    C --> D[HTML]
-    C --> E[CSS]
-    C --> F[JavaScript]
-    D --> G[ParseGen Web App]
-    E --> G
-    F --> G
-```
+///  a pic here
 
 ------------------------------------------------------------------------
 
@@ -106,22 +96,6 @@ flowchart TD
     G --> H[Repeat until stable]
     H --> I[Output FOLLOW sets]
     I --> J[End]
-```
-
-------------------------------------------------------------------------
-
-## LL(1) Parse Table Construction
-
-``` mermaid
-flowchart TD
-    A[Start] --> B[Compute FIRST & FOLLOW]
-    B --> C[For each production A → α]
-    C --> D[Add to table using FIRST(α)]
-    D --> E[If epsilon in FIRST(α)]
-    E --> F[Use FOLLOW(A)]
-    F --> G[Check conflicts]
-    G --> H[Output LL(1) table]
-    H --> I[End]
 ```
 
 ------------------------------------------------------------------------
